@@ -1,0 +1,508 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+
+%-------------------------------------------
+% Page Layout
+%-------------------------------------------
+
+\setlength{\multicolsep}{0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\geometry{
+    left=1.4cm,
+    top=0.7cm,
+    right=1.2cm,
+    bottom=0.8cm
+}
+
+\usepackage[most]{tcolorbox}
+
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,
+    outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-------------------------------------------
+% Sections Formatting
+%-------------------------------------------
+
+\titleformat{\section}
+  {\vspace{-2pt}\scshape\raggedright\large}
+  {}
+  {0em}
+  {}
+  [\color{black}\titlerule\vspace{-5pt}]
+
+%-------------------------------------------
+% Custom Commands
+%-------------------------------------------
+
+\newcommand{\resumeItem}[2]{
+    \item{
+        \textbf{#1}{\hspace{0.5mm}#2}
+    }
+}
+
+\newcommand{\resumePOR}[3]{
+    \vspace{0.5mm}
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]
+    {l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 &
+        \textit{\small{#3}}
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \item
+    \begin{tabular*}{0.98\textwidth}[t]
+    {l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} & \footnotesize{#2}
+    \end{tabular*}
+}
+
+\newcommand{\resumeProject}[4]{
+    \item
+    \begin{tabular*}{0.98\textwidth}[t]
+    {l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubItem}[2]{
+    \resumeItem{#1}{#2}
+}
+
+%-------------------------------------------
+% List Styles
+%-------------------------------------------
+
+% Lists without bullets
+\newcommand{\resumeSubHeadingListStart}{
+    \begin{itemize}[
+        leftmargin=*,
+        label={},
+        labelsep=0mm,
+        itemsep=1.2mm,
+        topsep=0mm,
+        parsep=0mm
+    ]
+}
+
+% Lists with bullets
+\newcommand{\resumeBulletListStart}{
+    \begin{itemize}[
+        leftmargin=2.5ex,
+        label=\textbullet,
+        labelsep=1mm,
+        itemsep=0.5mm,
+        topsep=0mm,
+        parsep=0mm
+    ]
+    \small
+}
+
+% Project bullet list
+\newcommand{\resumeItemListStart}{
+    \begin{justify}
+    \begin{itemize}[
+        leftmargin=3ex,
+        rightmargin=2ex,
+        labelsep=1.2mm,
+        itemsep=0.4mm,
+        topsep=1mm,
+        parsep=0mm
+    ]
+    \small
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+    \end{itemize}
+    \vspace{0.5mm}
+}
+
+\newcommand{\resumeBulletListEnd}{
+    \end{itemize}
+    \vspace{-1mm}
+}
+
+\newcommand{\resumeItemListEnd}{
+    \end{itemize}
+    \end{justify}
+    \vspace{-1.5mm}
+}
+
+\newcommand{\resumeHeadingSkillStart}{
+    \begin{itemize}[
+        leftmargin=*,
+        itemsep=1.2mm,
+        rightmargin=2ex
+    ]
+}
+
+\newcommand{\resumeHeadingSkillEnd}{
+    \end{itemize}
+    \vspace{-2mm}
+}
+
+\newcommand{\cvsection}[1]{%
+    \vspace{2mm}
+    \begin{tcolorbox}
+        \textbf{\large #1}
+    \end{tcolorbox}
+    \vspace{-4mm}
+}
+
+%-------------------------------------------
+% Column Types
+%-------------------------------------------
+
+\newcolumntype{L}{
+    >{\raggedright\arraybackslash}X
+}
+
+\newcolumntype{R}{
+    >{\raggedleft\arraybackslash}X
+}
+
+\newcolumntype{C}{
+    >{\centering\arraybackslash}X
+}
+
+%-------------------------------------------
+% Personal Information
+%-------------------------------------------
+
+\newcommand{\name}{Bonu Tarun}
+\newcommand{\course}{B.Tech in Computer Science and Engineering}
+\newcommand{\phone}{7382728546}
+\newcommand{\emaila}{tarunbonu547@gmail.com}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%-------------------------------------------
+
+\begin{document}
+
+\fontfamily{cmr}\selectfont
+
+%-------------------------------------------
+% HEADING
+%-------------------------------------------
+
+\begin{tabularx}{\linewidth}{L r}
+
+    \textbf{\Large \name}
+    &
+    {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}
+    \\[1mm]
+
+    {B.Tech in Computer Science and Engineering}
+    &
+    \href{mailto:\emaila}
+    {\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}}
+    \\[1mm]
+
+    {Gokaraju Rangaraju College of Engineering}
+    &
+    \href{https://github.com/TarunBonu547}
+    {\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub}}
+    \\[1mm]
+
+    {Hyderabad, Telangana, India}
+    &
+    \href{https://www.linkedin.com/in/bonu-tarun-38419a371/}
+    {\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn}}
+    \\[1mm]
+
+    {2024 -- 2028}
+    &
+    {\raisebox{0.0\height}{\footnotesize \faGlobe}\ {Portfolio}}
+    
+    \\[1mm]
+
+    
+
+\end{tabularx}
+
+\vspace{1mm}
+
+%-------------------------------------------
+% PROFESSIONAL SUMMARY
+%-------------------------------------------
+\section{\textbf{Professional Summary}}
+
+\small{
+Computer Science and Engineering undergraduate with a strong foundation in programming, data structures and
+algorithms, object-oriented programming, and database systems. Experienced in developing software applications and
+machine learning projects using Java, Python, SQL, and Streamlit. Interested in software engineering, backend
+development, and practical AI-driven solutions.
+
+}
+
+\vspace{1mm}
+
+%-------------------------------------------
+% EDUCATION
+%-------------------------------------------
+
+\section{\textbf{Education}}
+
+\begin{itemize}[
+    leftmargin=0pt,
+    label={},
+    itemsep=1.5mm,
+    topsep=0mm,
+    parsep=0mm
+]
+
+    \item
+    \begin{tabular*}{0.98\textwidth}[t]
+    {l@{\extracolsep{\fill}}r}
+        \textbf{Gokaraju Rangaraju College of Engineering}
+        & \textit{\small{2024 -- 2028}} \\
+        \textit{\small{B.Tech in Computer Science and Engineering}}
+        & \small{CGPA: 8.95/10}
+    \end{tabular*}
+
+    \item
+    \begin{tabular*}{0.98\textwidth}[t]
+    {l@{\extracolsep{\fill}}r}
+        \textbf{Prathibha Junior College}
+        & \textit{\small{2024}} \\
+        \textit{\small{Telangana State Board of Intermediate Education}}
+        & \small{Percentage: 98.1\%}
+    \end{tabular*}
+
+    \item
+    \begin{tabular*}{0.98\textwidth}[t]
+    {l@{\extracolsep{\fill}}r}
+        \textbf{Vignan English Medium School}
+        & \textit{\small{2022}} \\
+        \textit{\small{Board of Secondary Education, Andhra Pradesh}}
+        & \small{Percentage: 95.17\%}
+    \end{tabular*}
+
+\end{itemize}
+
+\vspace{-2mm}
+
+%-------------------------------------------
+% PERSONAL PROJECTS
+%-------------------------------------------
+
+\section{\textbf{Personal Projects}}
+
+\resumeSubHeadingListStart
+
+
+
+
+    \resumeProject
+  {Customer AI -- Real-Time Customer Segmentation \& Business Intelligence System}
+  {Python, Streamlit, Pandas, NumPy, Scikit-learn, PCA, K-Means, BIRCH}
+  {2026}
+  {\href{https://github.com/TarunBonu547/Customer_AI}{GitHub} $|$
+   \href{https://customer-ai-tarun.streamlit.app/}{Live Demo}}
+
+\resumeItemListStart
+
+  \item {Developed an interactive customer intelligence application using Python, Streamlit, Pandas, NumPy, and Scikitlearn on the UCI Wholesale Customers dataset.}
+
+  \item {Built an end-to-end machine learning pipeline using log transformation, StandardScaler, PCA, and K-Means, retaining 92.07\% of variance with three principal components.}
+
+  \item {Implemented and evaluated K-Means and BIRCH clustering using silhouette scores and other clustering evaluation
+metrics for customer segmentation.}
+
+  \item {Developed business intelligence features including real-time customer segmentation, segment explanations, similarcustomer comparisons, What-If simulations, savings insights, CSV uploads, interactive visualizations, and downloadable PDF reports.
+}
+
+
+\resumeItemListEnd
+
+
+\vspace{-2mm}
+
+%-------------------------------------------
+% TECHNICAL SKILLS
+%-------------------------------------------
+
+\section{\textbf{Technical Skills and Interests}}
+
+\begin{itemize}[
+    leftmargin=0.05in,
+    label={},
+    itemsep=0.6mm,
+    topsep=0mm,
+    parsep=0mm
+]
+
+    \small{\item{
+
+    \textbf{Languages:} Java, Python, C, JavaScript, SQL \\
+\textbf{Core CS:} DSA, OOP, DBMS, OS, Computer Networks \\
+\textbf{Frameworks \& Data:} Streamlit, Pandas, NumPy, Scikit-learn, PCA, K-Means, BIRCH \\
+\textbf{Tools \& Databases:} PostgreSQL, Git, GitHub, Postman, Swagger, VS Code, Plotly
+}}
+
+\end{itemize}
+
+\vspace{-2mm}
+
+%-------------------------------------------
+% ACHIEVEMENTS
+%-------------------------------------------
+
+\section{\textbf{Achievements}}
+
+\resumeBulletListStart
+
+    \item {
+        Secured 3rd place in a college-level hackathon by developing an AI-powered anomaly detection and explanation system using RAG and locally hosted LLMs.
+    }
+
+    \item {
+        Solved 180+ problems on LeetCode, demonstrating consistent practice in Data Structures and Algorithms.
+    }
+
+\resumeBulletListEnd
+
+\vspace{-1mm}
+
+%-------------------------------------------
+% CERTIFICATIONS
+%-------------------------------------------
+
+%-------------------------------------------
+% CERTIFICATIONS
+%-------------------------------------------
+
+%-------------------------------------------
+% CERTIFICATIONS
+%-------------------------------------------
+
+
+\section{\textbf{Certifications}}
+
+\begin{itemize}[
+    leftmargin=0pt,
+    label={},
+    itemsep=1.5mm,
+    topsep=0mm,
+    parsep=0mm
+]
+
+\item
+\begin{tabular*}{0.98\textwidth}[t]
+{l@{\extracolsep{\fill}}r}
+    \textbf{Generative AI, Deep Learning \& Language Models}
+    \textit{\small{-- EduSkills Academy}}
+    & \textit{\small{2026}}
+\end{tabular*}
+
+\item
+\begin{tabular*}{0.98\textwidth}[t]
+{l@{\extracolsep{\fill}}r}
+    \textbf{Generative AI Foundations}
+    \textit{\small{-- AWS Academy}}
+    & \textit{\small{2026}}
+\end{tabular*}
+
+\item
+\begin{tabular*}{0.98\textwidth}[t]
+{l@{\extracolsep{\fill}}r}
+    \textbf{Machine Learning Foundations}
+    \textit{\small{-- AWS Academy}}
+    & \textit{\small{2026}}
+\end{tabular*}
+
+\item
+\begin{tabular*}{0.98\textwidth}[t]
+{l@{\extracolsep{\fill}}r}
+    \textbf{Machine Learning for Natural Language Processing}
+    \textit{\small{-- AWS Academy}}
+    & \textit{\small{2026}}
+\end{tabular*}
+
+\item
+\begin{tabular*}{0.98\textwidth}[t]
+{l@{\extracolsep{\fill}}r}
+    \textbf{Database Programming with SQL}
+    \textit{\small{-- Oracle Academy}}
+    & \textit{\small{2026}}
+\end{tabular*}
+
+\end{itemize}
+
+\vspace{-2mm}
+
+%-------------------------------------------
+% POSITIONS OF RESPONSIBILITY
+%-------------------------------------------
+
+\section{\textbf{Positions of Responsibility}}
+
+\resumeBulletListStart
+
+    \item {
+        Led and coordinated a three-member team in the development and successful completion of a second-year academic project.
+    }
+
+\resumeBulletListEnd
+
+\vspace{-3mm}
+
+
+\end{document}
