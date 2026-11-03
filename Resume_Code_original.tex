@@ -1,10 +1,8 @@
 %-------------------------
 % Resume in Latex
-% Author
+% Author: Bonu Tarun
 % License : MIT
 %------------------------
-
-%---- Required Packages and Functions ----
 
 \documentclass[a4paper,11pt]{article}
 
@@ -86,32 +84,6 @@
 % Custom Commands
 %-------------------------------------------
 
-\newcommand{\resumeItem}[2]{
-    \item{
-        \textbf{#1}{\hspace{0.5mm}#2}
-    }
-}
-
-\newcommand{\resumePOR}[3]{
-    \vspace{0.5mm}
-    \item
-    \begin{tabular*}{0.97\textwidth}[t]
-    {l@{\extracolsep{\fill}}r}
-        \textbf{#1}\hspace{0.3mm}#2 &
-        \textit{\small{#3}}
-    \end{tabular*}
-    \vspace{-2mm}
-}
-
-\newcommand{\resumeSubheading}[4]{
-    \item
-    \begin{tabular*}{0.98\textwidth}[t]
-    {l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#4}} \\
-        \textit{\footnotesize{#3}} & \footnotesize{#2}
-    \end{tabular*}
-}
-
 \newcommand{\resumeProject}[4]{
     \item
     \begin{tabular*}{0.98\textwidth}[t]
@@ -121,15 +93,10 @@
     \end{tabular*}
 }
 
-\newcommand{\resumeSubItem}[2]{
-    \resumeItem{#1}{#2}
-}
-
 %-------------------------------------------
 % List Styles
 %-------------------------------------------
 
-% Lists without bullets
 \newcommand{\resumeSubHeadingListStart}{
     \begin{itemize}[
         leftmargin=*,
@@ -141,7 +108,6 @@
     ]
 }
 
-% Lists with bullets
 \newcommand{\resumeBulletListStart}{
     \begin{itemize}[
         leftmargin=2.5ex,
@@ -154,15 +120,14 @@
     \small
 }
 
-% Project bullet list
 \newcommand{\resumeItemListStart}{
     \begin{justify}
     \begin{itemize}[
         leftmargin=3ex,
         rightmargin=2ex,
         labelsep=1.2mm,
-        itemsep=0.4mm,
-        topsep=1mm,
+        itemsep=0.3mm,
+        topsep=0.5mm,
         parsep=0mm
     ]
     \small
@@ -181,28 +146,7 @@
 \newcommand{\resumeItemListEnd}{
     \end{itemize}
     \end{justify}
-    \vspace{-1.5mm}
-}
-
-\newcommand{\resumeHeadingSkillStart}{
-    \begin{itemize}[
-        leftmargin=*,
-        itemsep=1.2mm,
-        rightmargin=2ex
-    ]
-}
-
-\newcommand{\resumeHeadingSkillEnd}{
-    \end{itemize}
     \vspace{-2mm}
-}
-
-\newcommand{\cvsection}[1]{%
-    \vspace{2mm}
-    \begin{tcolorbox}
-        \textbf{\large #1}
-    \end{tcolorbox}
-    \vspace{-4mm}
 }
 
 %-------------------------------------------
@@ -269,15 +213,12 @@
 
     {2024 -- 2028}
     &
+    \href{https://tarunbonu.vercel.app/}
     {\raisebox{0.0\height}{\footnotesize \faGlobe}\ {Portfolio}}
     
     \\[1mm]
 
-    
-
 \end{tabularx}
-
-\vspace{1mm}
 
 %-------------------------------------------
 % PROFESSIONAL SUMMARY
@@ -285,11 +226,7 @@
 \section{\textbf{Professional Summary}}
 
 \small{
-Computer Science and Engineering undergraduate with a strong foundation in programming, data structures and
-algorithms, object-oriented programming, and database systems. Experienced in developing software applications and
-machine learning projects using Java, Python, SQL, and Streamlit. Interested in software engineering, backend
-development, and practical AI-driven solutions.
-
+CS undergraduate (CGPA 8.95/10) building ML pipelines (PCA, K-Means, BIRCH) and full-stack apps (React, Node.js, Socket.IO). 180+ LeetCode problems solved; 3rd place in a college hackathon. Targeting backend and ML engineering internships.
 }
 
 \vspace{1mm}
@@ -303,7 +240,7 @@ development, and practical AI-driven solutions.
 \begin{itemize}[
     leftmargin=0pt,
     label={},
-    itemsep=1.5mm,
+    itemsep=1.2mm,
     topsep=0mm,
     parsep=0mm
 ]
@@ -321,18 +258,9 @@ development, and practical AI-driven solutions.
     \begin{tabular*}{0.98\textwidth}[t]
     {l@{\extracolsep{\fill}}r}
         \textbf{Prathibha Junior College}
-        & \textit{\small{2024}} \\
+        & \textit{\small{2022 -- 2024}} \\
         \textit{\small{Telangana State Board of Intermediate Education}}
         & \small{Percentage: 98.1\%}
-    \end{tabular*}
-
-    \item
-    \begin{tabular*}{0.98\textwidth}[t]
-    {l@{\extracolsep{\fill}}r}
-        \textbf{Vignan English Medium School}
-        & \textit{\small{2022}} \\
-        \textit{\small{Board of Secondary Education, Andhra Pradesh}}
-        & \small{Percentage: 95.17\%}
     \end{tabular*}
 
 \end{itemize}
@@ -347,10 +275,8 @@ development, and practical AI-driven solutions.
 
 \resumeSubHeadingListStart
 
-
-
-
-    \resumeProject
+% ---------- PROJECT 1: Customer AI ----------
+\resumeProject
   {Customer AI -- Real-Time Customer Segmentation \& Business Intelligence System}
   {Python, Streamlit, Pandas, NumPy, Scikit-learn, PCA, K-Means, BIRCH}
   {2026}
@@ -358,33 +284,48 @@ development, and practical AI-driven solutions.
    \href{https://customer-ai-tarun.streamlit.app/}{Live Demo}}
 
 \resumeItemListStart
-
-  \item {Developed an interactive customer intelligence application using Python, Streamlit, Pandas, NumPy, and Scikitlearn on the UCI Wholesale Customers dataset.}
-
-  \item {Built an end-to-end machine learning pipeline using log transformation, StandardScaler, PCA, and K-Means, retaining 92.07\% of variance with three principal components.}
-
-  \item {Implemented and evaluated K-Means and BIRCH clustering using silhouette scores and other clustering evaluation
-metrics for customer segmentation.}
-
-  \item {Developed business intelligence features including real-time customer segmentation, segment explanations, similarcustomer comparisons, What-If simulations, savings insights, CSV uploads, interactive visualizations, and downloadable PDF reports.
-}
-
-
+  \item {Built an end-to-end ML pipeline (log transform, StandardScaler, PCA, K-Means) on the UCI Wholesale Customers dataset, retaining 92.07\% of variance with three principal components.}
+  \item {Benchmarked K-Means against BIRCH using silhouette, Davies-Bouldin, and Calinski-Harabasz metrics; K-Means scored 0.288 silhouette vs.\ 0.194 for BIRCH.}
+  \item {Shipped a 5-page Streamlit dashboard with real-time segmentation, what-if simulation, business CSV classification, and PDF reports, backed by a 20-test Pytest suite.}
 \resumeItemListEnd
 
+% ---------- PROJECT 2: SyncSound ----------
+\resumeProject
+  {SyncSound -- Real-Time Synchronized Music Listening \& Video Calling Platform}
+  {React 19, TypeScript, Node.js, Express, Socket.IO, WebRTC, Agora}
+  {2026}
+  {\href{https://github.com/TarunBonu547/SyncSound}{GitHub}}
 
+\resumeItemListStart
+  \item {Architected a server-authoritative playback model in Node.js/Socket.IO where one room timeline drives synchronized play, pause, seek, and track changes, with revision handling and drift correction for late joiners and reconnecting clients.}
+  \item {Integrated Agora WebRTC for private two-party video calls alongside shared YouTube playback, live chat with history replay, a shared queue, and rate-limited emoji reactions.}
+\resumeItemListEnd
+
+% ---------- PROJECT 3: Varnam Bangles ----------
+\resumeProject
+  {Varnam Bangles -- Luxury Jewellery Storefront with GitHub-Backed Admin}
+  {Node.js, Express, EJS, GitHub Contents API, bcrypt, Helmet}
+  {2026}
+  {\href{https://github.com/TarunBonu547/varnam-bangles}{GitHub}}
+
+\resumeItemListStart
+  \item {Built a full-stack storefront (Express/EJS) with a session-authenticated admin panel for product, category, and image CRUD, persisting JSON and images directly to a GitHub repository via the Contents API with SHA-based conflict retry.}
+  \item {Hardened with CSRF protection, rate limiting, Helmet CSP, bcrypt auth, and server-side MIME/size validation.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 \vspace{-2mm}
 
 %-------------------------------------------
 % TECHNICAL SKILLS
 %-------------------------------------------
 
-\section{\textbf{Technical Skills and Interests}}
+\section{\textbf{Technical Skills}}
 
 \begin{itemize}[
     leftmargin=0.05in,
     label={},
-    itemsep=0.6mm,
+    itemsep=0.4mm,
     topsep=0mm,
     parsep=0mm
 ]
@@ -393,8 +334,8 @@ metrics for customer segmentation.}
 
     \textbf{Languages:} Java, Python, C, JavaScript, SQL \\
 \textbf{Core CS:} DSA, OOP, DBMS, OS, Computer Networks \\
-\textbf{Frameworks \& Data:} Streamlit, Pandas, NumPy, Scikit-learn, PCA, K-Means, BIRCH \\
-\textbf{Tools \& Databases:} PostgreSQL, Git, GitHub, Postman, Swagger, VS Code, Plotly
+\textbf{Frameworks \& Data:} React, Node.js, Express, Streamlit, Pandas, NumPy, Scikit-learn, PCA, K-Means, BIRCH \\
+\textbf{Tools \& Databases:} PostgreSQL, Git, GitHub, Postman, Swagger, Plotly, Socket.IO
 }}
 
 \end{itemize}
@@ -410,11 +351,11 @@ metrics for customer segmentation.}
 \resumeBulletListStart
 
     \item {
-        Secured 3rd place in a college-level hackathon by developing an AI-powered anomaly detection and explanation system using RAG and locally hosted LLMs.
+        Secured 3rd place in a college-level hackathon building an AI-powered anomaly detection and explanation system with RAG and locally hosted LLMs.
     }
 
     \item {
-        Solved 180+ problems on LeetCode, demonstrating consistent practice in Data Structures and Algorithms.
+        Solved 180+ LeetCode problems; led a 3-member team to complete a second-year academic project.
     }
 
 \resumeBulletListEnd
@@ -425,21 +366,12 @@ metrics for customer segmentation.}
 % CERTIFICATIONS
 %-------------------------------------------
 
-%-------------------------------------------
-% CERTIFICATIONS
-%-------------------------------------------
-
-%-------------------------------------------
-% CERTIFICATIONS
-%-------------------------------------------
-
-
 \section{\textbf{Certifications}}
 
 \begin{itemize}[
     leftmargin=0pt,
     label={},
-    itemsep=1.5mm,
+    itemsep=0.8mm,
     topsep=0mm,
     parsep=0mm
 ]
@@ -447,62 +379,26 @@ metrics for customer segmentation.}
 \item
 \begin{tabular*}{0.98\textwidth}[t]
 {l@{\extracolsep{\fill}}r}
-    \textbf{Generative AI, Deep Learning \& Language Models}
-    \textit{\small{-- EduSkills Academy}}
+    \textbf{AWS Academy} --- Generative AI Foundations, ML Foundations, ML for NLP
     & \textit{\small{2026}}
 \end{tabular*}
 
 \item
 \begin{tabular*}{0.98\textwidth}[t]
 {l@{\extracolsep{\fill}}r}
-    \textbf{Generative AI Foundations}
-    \textit{\small{-- AWS Academy}}
+    \textbf{EduSkills Academy} --- Generative AI, Deep Learning \& Language Models
     & \textit{\small{2026}}
 \end{tabular*}
 
 \item
 \begin{tabular*}{0.98\textwidth}[t]
 {l@{\extracolsep{\fill}}r}
-    \textbf{Machine Learning Foundations}
-    \textit{\small{-- AWS Academy}}
-    & \textit{\small{2026}}
-\end{tabular*}
-
-\item
-\begin{tabular*}{0.98\textwidth}[t]
-{l@{\extracolsep{\fill}}r}
-    \textbf{Machine Learning for Natural Language Processing}
-    \textit{\small{-- AWS Academy}}
-    & \textit{\small{2026}}
-\end{tabular*}
-
-\item
-\begin{tabular*}{0.98\textwidth}[t]
-{l@{\extracolsep{\fill}}r}
-    \textbf{Database Programming with SQL}
-    \textit{\small{-- Oracle Academy}}
+    \textbf{Oracle Academy} --- Database Programming with SQL
     & \textit{\small{2026}}
 \end{tabular*}
 
 \end{itemize}
 
-\vspace{-2mm}
-
-%-------------------------------------------
-% POSITIONS OF RESPONSIBILITY
-%-------------------------------------------
-
-\section{\textbf{Positions of Responsibility}}
-
-\resumeBulletListStart
-
-    \item {
-        Led and coordinated a three-member team in the development and successful completion of a second-year academic project.
-    }
-
-\resumeBulletListEnd
-
 \vspace{-3mm}
-
 
 \end{document}
